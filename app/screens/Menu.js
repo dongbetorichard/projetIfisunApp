@@ -65,39 +65,39 @@ export default class Menu extends React.Component{
                             <Text style={styles.text__button}>Profil</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.button} >
+                        <TouchableOpacity style={styles.button}onPress={ () => navigate('Plaintes')} >
                         <Icon
                         reverse
                         reverseColor= 'black'
                         name='folder-open'
                         type='font-awesome'
                         color={Colors.primary}
-                        onPress={() => console.log('hello')} />
+                        onPress={ () => navigate('Plaintes')} />
 
                             <Text style={styles.text__button}>Vos Plaintes</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={ () => navigate('Plaintes')}>
                         <Icon
                         reverse
                         reverseColor= 'black'
                         name='comments'
                         type='font-awesome'
                         color={Colors.primary}
-                        onPress={() => console.log('hello')} />
+                        onPress={ () => navigate('Plaintes')} />
 
                             <Text style={styles.text__button}>Messagerie</Text>
                         </TouchableOpacity>
                     </View>
 
                     <View style={styles.tird}>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={ () => navigate('Commissariats')}>
                         <Icon
                         reverse
                         reverseColor= 'black'
                         name='map-marker'
                         type='font-awesome'
                         color={Colors.primary}
-                        onPress={() => console.log('hello')} />
+                        onPress={ () => navigate('Commissariats')} />
 
                             <Text style={styles.text__button}>Commissariats</Text>
                         </TouchableOpacity>
@@ -170,7 +170,7 @@ export default class Menu extends React.Component{
 const styles = StyleSheet.create ({
 
     logoContainer:{
-        top: 25,
+        top: 20,
         alignItems:'center'
     },
     
@@ -180,7 +180,7 @@ const styles = StyleSheet.create ({
     },
 
     container: {
-        top: 100,
+        top: 50,
     },
 
 

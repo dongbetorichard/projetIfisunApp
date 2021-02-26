@@ -8,5 +8,6 @@ export default {
     white:"#fff",
     new: 'FF5733',
     green: '#b0f2b6',
+    numberContainer:'FFF7E8'
 
 }

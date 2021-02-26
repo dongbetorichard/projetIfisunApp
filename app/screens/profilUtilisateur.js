@@ -14,7 +14,7 @@ import {
 import { useDimensions} from "@react-native-community/hooks";
 import SwitchSelector from "react-native-switch-selector";
 
-import Colors from '../config/Colors';
+import Colors from '../config/Colors'; 
 
 
 export default class ProfilUtilisateur extends React.Component {
@@ -32,14 +32,14 @@ export default class ProfilUtilisateur extends React.Component {
                 </View>
                 <View style={styles.body}>
                     <View>
-                        <Text style={{marginTop: 45, fontSize: 30, fontWeight: 'bold', alignSelf:'center',}}>Victoria Robertson</Text>
+                        <Text style={{marginTop: 35, fontSize: 20, fontWeight: 'bold', alignSelf:'center',}}>Victoria Robertson</Text>
                     </View>
                     <View>
                         <TouchableOpacity>
-                        <Text style={{ fontSize: 16, fontWeight: 'bold', alignSelf:'center',}}>A mantra goes here</Text>
+                        <Text style={{ fontSize: 12, fontWeight: 'bold', alignSelf:'center',}}>A mantra goes here</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{paddingTop: 15, }}>
+                    <View style={{paddingTop:5,}}>
                         <SwitchSelector
                             initial={0}
                             onPress={value => this.setState({ selectValue  : value })}
@@ -57,7 +57,25 @@ export default class ProfilUtilisateur extends React.Component {
                             ]}
                             />
                     </View>
-                    <View style={{top: 100}}>
+                    <View style={{ marginLeft:15}}>
+                        <Text style={{ marginTop:5, fontWeight:'bold' }}>Nom</Text>
+                        <TextInput style={{  borderBottomColor: Colors.greyBorder}} placeholder='Doukpè' placeholderTextColor="black" keyboardType= 'default'
+                        />
+                        <Text style={{ fontWeight:'bold'}}>Prénom(s)</Text>
+                        <TextInput placeholder='Reine' placeholderTextColor="black"  keyboardType= 'default'
+                        />
+                        <Text style={{ fontWeight:'bold'}} >Date de Naissance</Text>
+                        <TextInput placeholder='22-05-00' placeholderTextColor="black"  keyboardType='numeric'
+                        />
+                        <Text style={{fontWeight:'bold'}}>Profession</Text>
+                        <TextInput placeholder='Couturière' placeholderTextColor="black"  keyboardType= 'default'
+                        />
+                        <Text style={{ fontWeight:'bold'}}>Adresse</Text>
+                        <TextInput placeholder='Cotonou' placeholderTextColor="black" keyboardType= 'default'
+                        />
+
+                    </View>
+                    <View style={{top:5}}>
                         <TouchableOpacity  style={styles.close_button} onPress={ () => navigate('Menu')}>
                             <Text style={{color: Colors.secondary, fontSize:18}} onPress={ () => navigate('Menu')}>Fermer</Text>
                         </TouchableOpacity>
@@ -78,36 +96,37 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: Colors.secondary,
         width: '100%',
-        height:245,
-        alignItems: 'center'
+        height:150,
+        alignItems: 'center',
+        
     },
 
     imageContainer: {
         backgroundColor: Colors.primary,
         position: 'absolute',
-        width: 160,
-        height: 160,
+        width: 140,
+        height: 140,
         borderRadius: 80,
-        top: 130,
+        top: 50,
         alignItems: 'center',
         justifyContent: 'center'
     },
 
     image: {
-        width: 151,
-        height: 151,
+        width: 130,
+        height: 130,
         borderRadius: 80,
     },
 
     body: {
-        marginLeft: 10,
-        marginRight: 10,
+        marginLeft: 15,
+        marginRight: 15,
         //alignItems: 'center'
     },
 
     close_button: {
         borderRadius: 50,
-        height: 51,
+        height: 35,
         width: '90%',
         justifyContent: 'center',
         alignItems: 'center',

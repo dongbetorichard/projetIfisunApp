@@ -1,7 +1,7 @@
 export default user = [
     {
         id:1,
-        username: "Dr Seth RICHARD",
+        username: "Rose RICHARD",
         work:" Médecin",
         town:"Bohicon",
         phone_number:"+22906202301",

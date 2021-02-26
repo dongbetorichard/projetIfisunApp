@@ -8,7 +8,7 @@ import AppNavigator from './app/navigations/Navigator'
 // import ArticleDetail from './app/screens/ArticleDetail'
 // import Membres from './app/screens/Membres'
 // import Succes from './app/screens/Succes'
-
+ //import Plaintes from './app/screens/Plaintes'
 
 export default class App extends Component {
   
@@ -23,6 +23,7 @@ export default class App extends Component {
       //<ArticleDetail/>
       //<Membres/>
       //<Succes/>
+      //<Plaintes/>
      
     )
   }

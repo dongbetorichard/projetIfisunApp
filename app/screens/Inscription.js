@@ -1,15 +1,24 @@
 import React from 'react'
-import { StyleSheet, View, Text, TextInput, Button, TouchableOpacity } from 'react-native' 
+import CheckBox from '@react-native-community/checkbox'
+
+import { 
+    StyleSheet, 
+    View, 
+    Text, 
+    TextInput, 
+    TouchableOpacity, 
+} from 'react-native' 
 
 import Colors from '../config/Colors'
 
+// const {toggleCheckBox,setToggleCheckBox} = useState(false);
 
 export default class Inscription extends React.Component {
     render() {
+
         const {navigate} = this.props.navigation
         return(
             <View style={styles.main_container}>
-                <Text style={styles.text_signin}>Inscription</Text>
                 <View style={styles.textinput_container}>
                     <TextInput style={styles.textinput} placeholder='Nom et Prénom(s)' keyboardType= 'default' />
                     <TextInput style={styles.textinput} placeholder='Email' keyboardType='email-address' />
@@ -21,6 +30,15 @@ export default class Inscription extends React.Component {
                         <Text style={{color: Colors.secondary}}>Inscription</Text>
                     </TouchableOpacity>
                 </View>
+                {/* <View style={styles.checkboxContainer}>
+                    <CheckBox
+                        style={styles.checkbox}
+                        disabled={false}
+                        value={toggleCheckBox}
+                        onValueChange={{newValue} => setToggleCheckBox{newValue}}
+                    />
+                    <Text> Recevoir les mails de Ifisun</Text>
+                </View> */}
             </View>
           )
     }
@@ -28,21 +46,10 @@ export default class Inscription extends React.Component {
 
 const styles = StyleSheet.create({
     main_container: {
-      marginTop:20,
       flex: 1,
       justifyContent: 'center',
       marginHorizontal: 16,
       fontFamily: 'inter',
-    },
-  
-    text_signin: {
-        fontSize: 30,
-        textAlign: 'center',
-        
-    },
-
-    textinput_container: {
-
     },
   
     textinput: {
@@ -73,6 +80,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: '1%',
         textAlign: 'center'
-        }
+        },
+
+    checkboxContainer:{
+        flexDirection:'row',
+        marginVertical: 30,
+        alignItems:'center'
+    },
+        checkbox: {
+            width: 75,
+            height: 75,
+            marginRight: 20,
+        },
   
   })

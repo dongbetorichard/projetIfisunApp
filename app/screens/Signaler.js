@@ -17,7 +17,7 @@ export default class Signaler extends React.Component {
                             style={styles.textinput_description} 
                             placeholder="Expliquez un peu le problème "
                             multiline={true}
-                            numberOfLines={8}
+                            numberOfLines={5}
                              />
                     </View>
                     <View style={styles.ajouterContainer}>
@@ -46,8 +46,8 @@ export default class Signaler extends React.Component {
                                         type='foundation'
                                         color={Colors.gray01}
                                         onPress={() => console.log('hello')} />
-                                    </TouchableOpacity>
-                                    <Text style={styles.text}> Ajouter une ou des photos </Text>
+                                </TouchableOpacity>
+                                <Text style={styles.text}> Ajouter une ou des photos </Text>
                             </View>
                         </View>
 
