@@ -1,6 +1,6 @@
-export default complaints = [
-    {
-        id:1
-    },
+// export default complaints = [
+//     {
+//         id:1
+//     },
 
-]
+// ]

@@ -11,7 +11,7 @@ export default class Developpement extends React.Component {
         return (
             <SafeAreaView style={styles.main_container}>
                 <View >
-                    <Text style={{fontSize:24, textAlign:'center', fontWeight:'bold', color: Colors.secondary}}>Trouvez des formations à coup réduit pour les dames !</Text>
+                    <Text style={{fontSize:24, textAlign:'center', fontWeight:'bold', color: Colors.secondary}}>Trouvez des formations à coût réduit pour les dames !</Text>
                 </View>
                 <FlatList
                     data={coursesInfo}

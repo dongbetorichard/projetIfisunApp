@@ -6,14 +6,19 @@ import {
     View, 
     Text, 
     TextInput, 
-    TouchableOpacity, 
+    TouchableOpacity,
+    Checkbox, 
 } from 'react-native' 
 
 import Colors from '../config/Colors'
 
 // const {toggleCheckBox,setToggleCheckBox} = useState(false);
 
-export default class Inscription extends React.Component {
+export default class Register extends React.Component {
+    // checkBoxValidation()
+    // {
+    //     alert("")
+    // }
     render() {
 
         const {navigate} = this.props.navigation
@@ -24,6 +29,20 @@ export default class Inscription extends React.Component {
                     <TextInput style={styles.textinput} placeholder='Email' keyboardType='email-address' />
                     <TextInput style={styles.textinput} placeholder='Téléphone' keyboardType='numeric' />
                     <TextInput secureTextEntry={true} style={styles.textinput} placeholder='Mot de passe' />
+                </View>
+                <View style={{flexDirection:'row', alignItems:'center', marginLeft:5}}>
+                    <CheckBox 
+                        style={{}}
+                        value={false} onChange={()=>this.checkBoxValidation()}                      
+                    />
+                    <Text> Recevoir les mails de Ifisun.</Text>
+                </View>
+                <View style={{flexDirection:'row', alignItems:'center', marginLeft:5}}>
+                    <CheckBox 
+                        style={{}}
+                        value={false} onChange={()=>this.checkBoxValidation()}                      
+                    />
+                    <Text> Faire partie de la communauté.</Text>
                 </View>
                 <View>
                     <TouchableOpacity onPress={ () => navigate('Connexion')} style={styles.register_button} >
@@ -37,7 +56,6 @@ export default class Inscription extends React.Component {
                         value={toggleCheckBox}
                         onValueChange={{newValue} => setToggleCheckBox{newValue}}
                     />
-                    <Text> Recevoir les mails de Ifisun</Text>
                 </View> */}
             </View>
           )
@@ -87,10 +105,5 @@ const styles = StyleSheet.create({
         marginVertical: 30,
         alignItems:'center'
     },
-        checkbox: {
-            width: 75,
-            height: 75,
-            marginRight: 20,
-        },
   
   })

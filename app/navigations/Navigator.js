@@ -5,7 +5,7 @@ import Inscription from '../screens/Inscription';
 import Connexion from '../screens/Connexion';
 import Menu from '../screens/Menu';
 import Signaler from '../screens/Signaler';
-import ProfilUtilisateur from '../screens/profilUtilisateur';
+import Profil from '../screens/Profil';
 import Succes from '../screens/Succes';
 import Membres from '../screens/Membres';
 import Assistance from '../screens/Assistance';
@@ -48,7 +48,7 @@ const AppNavigator = createStackNavigator({
             }
         },
 
-        profilUtilisateur:{screen:ProfilUtilisateur,
+        Profil:{screen:Profil,
             navigationOptions: {
                 title: 'Profil'
             }
